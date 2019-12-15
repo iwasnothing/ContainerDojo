@@ -90,7 +90,7 @@ const randomHK = () => randomLocation.randomCirclePoint(hk, 4000)
 //==================================================================== Influx DB
 
 const dbName = "mydb"
-const dbHost = 'influxdb'
+const dbHost = '10.12.6.230'
 const dbPort = '8086'
 
 // TODO: Define schema for driver and passenger's geolocation
@@ -108,7 +108,7 @@ const schema = [{
 // TODO: dynamic locate neighbouring container i.e. InfluxDB
 // docker container inspect <container id> | less
 // Grep 'IPAddress' 
-const influx = new InfluxDB(`http://${dbHost}:${dbPort}/${dbName}`)
+const influx = new InfluxDB(`http://influxdb-admin:Eoiyb22WFhtZztB9CMZRx1eYQyBu6JjF@${dbHost}:${dbPort}/${dbName}`)
 
 // Create database if it doesn't exists
 // var operation = retry.operation({retries: 3, maxTimeout: 5000})
