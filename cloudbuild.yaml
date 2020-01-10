@@ -8,3 +8,13 @@ steps:
       echo "***********************"
       echo "$BRANCH_NAME"
       echo "***********************"
+- id: 'ls dir'
+  name: 'alpine'
+  entrypoint: 'sh'  
+  args: 
+  - '-c'
+  - | 
+      cd 01_SimpleApp/app
+      pwd
+      ls
+      cat Dockerfile
